@@ -1,0 +1,14 @@
+# OpenMoney MCP for Codex
+# Скопируйте секцию в ~/.codex/config.toml или .codex/config.toml проекта.
+# Замените YOUR_OPENMONEY_ROOT на абсолютный путь к клону репозитория.
+# Ключи — через env процесса или appsettings рядом с MCP.
+
+[mcp_servers.openmoney]
+command = "dotnet"
+args = [
+  "run",
+  "--project",
+  "YOUR_OPENMONEY_ROOT/mcp/OpenMoney.Mcp/OpenMoney.Mcp.csproj",
+  "-c",
+  "Release"
+]

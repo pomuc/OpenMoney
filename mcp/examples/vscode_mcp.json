@@ -1,0 +1,21 @@
+{
+  "servers": {
+    "openmoney": {
+      "type": "stdio",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/mcp/OpenMoney.Mcp/OpenMoney.Mcp.csproj",
+        "-c",
+        "Release"
+      ],
+      "env": {
+        "TBank__TerminalKey": "",
+        "TBank__TerminalPassword": "",
+        "YooMoney__ShopId": "",
+        "YooMoney__SecretKey": ""
+      }
+    }
+  }
+}

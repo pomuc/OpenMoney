@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>OpenMoney.Mcp</RootNamespace>
+    <AssemblyName>OpenMoney.Mcp</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+    <PackageReference Include="ModelContextProtocol" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\sdks\OpenMoney.TBank\src\OpenMoney.TBank\OpenMoney.TBank.csproj" />
+    <ProjectReference Include="..\..\sdks\OpenMoney.Tochka\src\OpenMoney.Tochka\OpenMoney.Tochka.csproj" />
+    <ProjectReference Include="..\..\sdks\OpenMoney.VTB\src\OpenMoney.VTB\OpenMoney.VTB.csproj" />
+    <ProjectReference Include="..\..\sdks\OpenMoney.CloudPayments\src\OpenMoney.CloudPayments\OpenMoney.CloudPayments.csproj" />
+    <ProjectReference Include="..\..\sdks\OpenMoney.Inwizo\src\OpenMoney.Inwizo\OpenMoney.Inwizo.csproj" />
+    <ProjectReference Include="..\..\sdks\OpenMoney.YooMoney\src\OpenMoney.YooMoney\OpenMoney.YooMoney.csproj" />
+    <ProjectReference Include="..\..\sdks\OpenMoney.Fiscal\src\OpenMoney.Fiscal\OpenMoney.Fiscal.csproj" />
+    <ProjectReference Include="..\..\sdks\OpenMoney.SelfEmployed\src\OpenMoney.SelfEmployed\OpenMoney.SelfEmployed.csproj" />
+    <ProjectReference Include="..\..\sdks\OpenMoney.Kyc\src\OpenMoney.Kyc\OpenMoney.Kyc.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="appsettings.*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

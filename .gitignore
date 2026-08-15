@@ -1,0 +1,72 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE
+.vs/
+.idea/
+*.user
+*.suo
+
+# Build
+bin/
+obj/
+node_modules/
+dist/
+build/
+coverage/
+*.log
+
+# Secrets / local only
+.env
+.env.*
+!.env.example
+secrets.json
+credentials.json
+*.pem
+*.key
+*.pfx
+*.p12
+*.jks
+appsettings.Production.json
+appsettings.Production.*.json
+SECRETS_TO_REVOKE.md
+.open-source-quarantine/
+gitlab.txt
+github.txt
+servers.txt
+
+# NuGet
+*.nupkg
+*.snupkg
+
+# Misc
+log.txt
+*.dump
+*.backup
+*.bak
+
+.source-cache/
+
+# Локальные NuGet-артефакты
+artifacts/
+
+# Этап 1 публичного релиза: исторические приложения не коммитим
+products/
+
+# Внутренние логи санитизации (не пользовательская документация)
+inventory/SANITIZE_PASS*.md
+inventory/SECURITY_SCAN_IB.md
+inventory/SCRUB_CHECKLIST.md
+
+# Внутренние scrub/copy скрипты (содержат fingerprint'ы доменов/паттернов зачистки)
+scripts/
+
+# Внутренние рабочие заметки / не для публичного репозитория
+specs/
+inventory/
+GITHUB_UPLOAD.md
+**/SOURCE.md
+sdks/**/SECURITY.md
+

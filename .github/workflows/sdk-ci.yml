@@ -1,0 +1,33 @@
+name: SDK CI
+
+on:
+  push:
+    paths:
+      - "sdks/**"
+      - "OpenMoney.sln"
+      - ".github/workflows/sdk-ci.yml"
+  pull_request:
+    paths:
+      - "sdks/**"
+      - "OpenMoney.sln"
+      - ".github/workflows/sdk-ci.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Restore
+        run: dotnet restore OpenMoney.sln
+      - name: Build
+        run: dotnet build OpenMoney.sln -c Release --no-restore
+      - name: Pack
+        run: dotnet pack OpenMoney.sln -c Release --no-build -o artifacts/nupkg
+      - name: Upload packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: nupkgs
+          path: artifacts/nupkg/*

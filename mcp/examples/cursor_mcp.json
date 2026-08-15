@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "openmoney": {
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/mcp/OpenMoney.Mcp/OpenMoney.Mcp.csproj",
+        "-c",
+        "Release"
+      ],
+      "env": {
+        "TBank__TerminalKey": "",
+        "TBank__TerminalPassword": "",
+        "YooMoney__ShopId": "",
+        "YooMoney__SecretKey": "",
+        "VtbAcquiring__Token": "",
+        "CloudPayments__PublicId": "",
+        "CloudPayments__ApiSecret": "",
+        "Inwizo__BaseUrl": "",
+        "Inwizo__Account": "",
+        "Inwizo__ApiKey": "",
+        "Inwizo__Operator": "",
+        "TBankNpd__Token": "",
+        "Kyc__Didit__ClientId": "",
+        "Kyc__Didit__ClientSecret": ""
+      }
+    }
+  }
+}
